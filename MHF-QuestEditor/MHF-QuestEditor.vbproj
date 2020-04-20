@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5E3BE8E4-70F2-4FE2-9C47-A5F1D7ED9CB5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>MHF_QuestEditor.My.MyApplication</StartupObject>
+    <RootNamespace>MHF_QuestEditor</RootNamespace>
+    <AssemblyName>MHF-QuestEditor</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>MHF-QuestEditor.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>MHF-QuestEditor.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CreateQuest.Designer.vb">
+      <DependentUpon>CreateQuest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CreateQuest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Create_Choose.Designer.vb">
+      <DependentUpon>Create_Choose.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Create_Choose.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Create_ChooseMonsterLocation.Designer.vb">
+      <DependentUpon>Create_ChooseMonsterLocation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Create_ChooseMonsterLocation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartupForm.Designer.vb">
+      <DependentUpon>StartupForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StartupForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocationList.vb" />
+    <Compile Include="Monsters.vb" />
+    <Compile Include="QuestObj.vb" />
+    <Compile Include="Ranks.vb" />
+    <Compile Include="Structs.vb" />
+    <Compile Include="CRC32.vb" />
+    <Compile Include="Items.vb" />
+    <Compile Include="EditQuest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditQuest.Designer.vb">
+      <DependentUpon>EditQuest.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CreateQuest.resx">
+      <DependentUpon>CreateQuest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Create_Choose.resx">
+      <DependentUpon>Create_Choose.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Create_ChooseMonsterLocation.resx">
+      <DependentUpon>Create_ChooseMonsterLocation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditQuest.resx">
+      <DependentUpon>EditQuest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartupForm.resx">
+      <DependentUpon>StartupForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\MonsterHunter.ttf" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Logo-MHFG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\BowLeft.png" />
+    <Content Include="Assets\BowRight.png" />
+    <Content Include="Assets\Maps\Desert Day.png" />
+    <Content Include="Assets\Maps\Desert Night.png" />
+    <Content Include="Assets\Maps\Jungle Day.png" />
+    <Content Include="Assets\Maps\Jungle Night.png" />
+    <Content Include="Assets\Maps\Swamp Day.png" />
+    <Content Include="Assets\Maps\Volcano Day.png" />
+    <Content Include="Assets\Maps\Volcano Night.png" />
+    <Content Include="Assets\Sounds\click.wav" />
+    <None Include="Resources\font.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
